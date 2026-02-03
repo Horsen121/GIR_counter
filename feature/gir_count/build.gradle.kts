@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "com.example.gir_counter"
+    namespace = "com.example.gir_count"
     compileSdk {
         version = release(36)
     }
@@ -26,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -46,6 +47,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

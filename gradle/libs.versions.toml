@@ -10,7 +10,10 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.3"
 kotlin = "2.3.0"
 composeBom = "2026.01.01"
+kotlinxSerializationJson = "1.10.0"
 
+material3 = "1.4.0"
+materialVersion = "1.11.0"
 navigationCompose = "2.9.7"
 coroutines = "1.10.2"
 appcompat = "1.7.1"
@@ -22,6 +25,7 @@ koinAndroid = "4.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -49,10 +53,13 @@ koin-compose = { module = "io.insert-koin:koin-androidx-compose" }
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundationLayout" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose"}
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 

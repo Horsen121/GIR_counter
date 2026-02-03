@@ -1,4 +1,4 @@
-package com.example.gir_counter.domain
+package com.example.gir_count.domain
 
 @JvmInline
 value class Latitude(val degrees: Double) {

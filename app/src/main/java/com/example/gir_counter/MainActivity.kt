@@ -17,7 +17,8 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.gir_counter.ui.GIRCounterScreen
+import com.example.gir_count.GIRCounterRoute
+import com.example.gir_count.ui.GIRCounterScreen
 import com.example.ui.theme.GIRcounterTheme
 
 class MainActivity : ComponentActivity() {

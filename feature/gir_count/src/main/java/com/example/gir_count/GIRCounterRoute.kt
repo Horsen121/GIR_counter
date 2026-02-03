@@ -1,4 +1,4 @@
-package com.example.gir_counter
+package com.example.gir_count
 
 import kotlinx.serialization.Serializable
 

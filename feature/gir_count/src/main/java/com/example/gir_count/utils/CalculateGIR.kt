@@ -1,8 +1,8 @@
-package com.example.gir_counter.utils
+package com.example.gir_count.utils
 
-import com.example.gir_counter.domain.GeoPoint
-import com.example.gir_counter.domain.Green
-import com.example.gir_counter.domain.GreenForm
+import com.example.gir_count.domain.GeoPoint
+import com.example.gir_count.domain.Green
+import com.example.gir_count.domain.GreenForm
 import kotlin.math.abs
 import kotlin.math.asin
 import kotlin.math.cos

@@ -1,12 +1,12 @@
 package com.example.gir_counter
 
-import com.example.gir_counter.domain.GeoPoint
-import com.example.gir_counter.domain.Green
-import com.example.gir_counter.domain.GreenForm
-import com.example.gir_counter.domain.Latitude
-import com.example.gir_counter.domain.Longitude
-import com.example.gir_counter.utils.calculateGIR
-import com.example.gir_counter.utils.haversine
+import com.example.gir_count.domain.GeoPoint
+import com.example.gir_count.domain.Green
+import com.example.gir_count.domain.GreenForm
+import com.example.gir_count.domain.Latitude
+import com.example.gir_count.domain.Longitude
+import com.example.gir_count.utils.calculateGIR
+import com.example.gir_count.utils.haversine
 import org.junit.Test
 
 class GIRCalculatorTest {
@@ -32,13 +32,13 @@ class GIRCalculatorTest {
 
     @Test
     fun `isInsideCircle point on edge is inside`() {
-        val shot = GeoPoint(Latitude(50.0001), Longitude(0.0)) // ~11м
+        val shot = GeoPoint(Latitude(50.0001), Longitude(0.0))
         assert(calculateGIR(greenRound, shot))
     }
 
     @Test
     fun `isInsideCircle point inside is true`() {
-        val shot = GeoPoint(Latitude(50.00007), Longitude(0.00003)) // ~11м
+        val shot = GeoPoint(Latitude(50.00007), Longitude(0.00003))
         assert(calculateGIR(greenRound, shot))
     }
 
