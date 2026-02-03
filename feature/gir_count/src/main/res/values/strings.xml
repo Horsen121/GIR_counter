@@ -10,8 +10,19 @@
     <string name="gir_counter_par5">Par 5</string>
 
     <string name="gir_counter_green_title">Set a green values</string>
+    <string name="gir_counter_green_form">Select a form of the green</string>
     <string name="gir_counter_green_round">Round</string>
     <string name="gir_counter_green_square">Square</string>
+    <string name="gir_counter_green_front_lat">Set a front latitude</string>
+    <string name="gir_counter_green_front_long">Set a front longitude</string>
+    <string name="gir_counter_green_middle_lat">Set a middle latitude</string>
+    <string name="gir_counter_green_middle_long">Set a middle longitude</string>
+    <string name="gir_counter_green_back_lat">Set a back latitude</string>
+    <string name="gir_counter_green_back_long">Set a back longitude</string>
+
+    <string name="gir_counter_shot_title">Add a shot</string>
+    <string name="gir_counter_shot_lat">Set a shot latitude</string>
+    <string name="gir_counter_shot_long">Set a shot longitude</string>
 
     <string name="gir_counter_result_title">GIR achievement</string>
     <string name="gir_counter_result_body_susses">Congratulation! You achieve the GIR!</string>

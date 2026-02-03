@@ -17,7 +17,14 @@ data class Green(
 
 fun greenStringList(context: Context): List<String> {
     return listOf(
-        context.getString(R.string.gir_counter_par3),
-        context.getString(R.string.gir_counter_par4),
+        context.getString(R.string.gir_counter_green_round),
+        context.getString(R.string.gir_counter_green_square),
     )
+}
+
+fun GreenForm.string(): Int {
+    return when(this) {
+        GreenForm.ROUND -> { R.string.gir_counter_green_round }
+        else -> R.string.gir_counter_green_square
+    }
 }

@@ -1,6 +1,8 @@
 package com.example.gir_count.presentation
 
 import android.app.Application
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.gir_count.domain.GeoPoint
@@ -30,29 +32,52 @@ class GIRCounterViewModel(
 
     private val _green = MutableStateFlow<Green?>(null)
     val greenValues = greenStringList(application)
-    private val _greenFront =  MutableStateFlow(0.0f)
-    val greenFront: StateFlow<Float> = _greenFront
-    private val _greenMiddle =  MutableStateFlow(0.0f)
-    val greenMiddle: StateFlow<Float> = _greenMiddle
-    private val _greenBack =  MutableStateFlow(0.0f)
-    val greenBack: StateFlow<Float> = _greenBack
+    private val _greenForm = MutableStateFlow<GreenForm?>(null)
+    val greenForm: StateFlow<GreenForm?> = _greenForm
+    private val _greenFrontLat = mutableStateOf("")
+    val greenFrontLat: State<String> = _greenFrontLat
+    private val _greenFrontLong = mutableStateOf("")
+    val greenFrontLong: State<String> = _greenFrontLong
+    private val _greenMiddleLat =  mutableStateOf("")
+    val greenMiddleLat: State<String> = _greenMiddleLat
+    private val _greenMiddleLong =  mutableStateOf("")
+    val greenMiddleLong: State<String> = _greenMiddleLong
+    private val _greenBackLat =  mutableStateOf("")
+    val greenBackLat: State<String> = _greenBackLat
+    private val _greenBackLong =  mutableStateOf("")
+    val greenBackLong: State<String> = _greenBackLong
 
     private val _shots = MutableStateFlow<List<GeoPoint>>(emptyList())
-    private val _shotLat =  MutableStateFlow(0.0f)
-    val shotLat: StateFlow<Float> = _shotLat
-    private val _shotLong =  MutableStateFlow(0.0f)
-    val shotLong: StateFlow<Float> = _shotLong
+    private val _shotLat = mutableStateOf("")
+    val shotLat: State<String> = _shotLat
+    private val _shotLong =  mutableStateOf("")
+    val shotLong: State<String> = _shotLong
+
+    val isCalculationEnabled = MutableStateFlow(false)
 
     fun onParChange(par: Par) {
         _par.value = par
     }
 
-    fun onGreenFormChange(green: Green) {
+    fun onFormChange(value: GreenForm) { _greenForm.value = value }
+    fun onFrontLatChange(value: String) { _greenFrontLat.value = value }
+    fun onFrontLongChange(value: String) { _greenFrontLong.value = value }
+    fun onMiddleLatChange(value: String) { _greenMiddleLat.value = value }
+    fun onMiddleLongChange(value: String) { _greenMiddleLong.value = value }
+    fun onBackLatChange(value: String) { _greenBackLat.value = value }
+    fun onBackLongChange(value: String) { _greenBackLong.value = value }
+    fun onGreenChange(green: Green) {
         _green.value = green
+
+        isCalculationEnabled.value = _shots.value.isNotEmpty()
     }
 
+    fun onShotLatChange(value: String) { _shotLat.value = value }
+    fun onShotLongChange(value: String) { _shotLong.value = value }
     fun onShotAdd(shot: GeoPoint) {
         _shots.value = _shots.value.plus(shot)
+
+        isCalculationEnabled.value = _green.value != null
     }
 
     fun setCalculation(fromDevice: Boolean) {
