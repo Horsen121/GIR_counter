@@ -15,7 +15,7 @@ class GIRApp: Application() {
             androidContext(this@GIRApp)
 
             modules(
-
+                GIRCounterModule
             )
         }
     }
