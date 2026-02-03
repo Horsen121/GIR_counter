@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gir_counter_screen_name">GIR Counter</string>
+
+    <string name="gir_counter_values_from">Get values from device?</string>
+
+    <string name="gir_counter_par_title">Select a par</string>
+    <string name="gir_counter_par3">Par 3</string>
+    <string name="gir_counter_par4">Par 4</string>
+    <string name="gir_counter_par5">Par 5</string>
+
+    <string name="gir_counter_green_title">Set a green values</string>
+    <string name="gir_counter_green_round">Round</string>
+    <string name="gir_counter_green_square">Square</string>
+
+    <string name="gir_counter_result_title">GIR achievement</string>
+    <string name="gir_counter_result_body_susses">Congratulation! You achieve the GIR!</string>
+    <string name="gir_counter_result_body_failed">Sorry, but you have not achieve the GIR</string>
+
+    <string name="gir_counter_button_calculate">Calculate GIR</string>
+
+
+    <string name="gir_counter_latitude">Latitude must be between -90 and 90</string>
+    <string name="gir_counter_longitude">Longitude must be between -180 and 180</string>
+</resources>

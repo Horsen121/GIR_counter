@@ -1,6 +1,7 @@
 package com.example.ui.components
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,7 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 @Composable
 fun TitleText(
     @StringRes text: Int,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.fillMaxSize(),
     color: Color = MaterialTheme.colorScheme.onBackground,
     textAlign: TextAlign = TextAlign.Center
 ) {
@@ -66,6 +67,21 @@ fun BodyMediumText(
 ) {
     Text(
         text = stringResource(text),
+        style = MaterialTheme.typography.bodyMedium,
+        color = color,
+        textAlign = textAlign,
+        modifier = modifier
+    )
+}
+@Composable
+fun BodyMediumText(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = MaterialTheme.colorScheme.onBackground,
+    textAlign: TextAlign = TextAlign.Unspecified
+) {
+    Text(
+        text = text,
         style = MaterialTheme.typography.bodyMedium,
         color = color,
         textAlign = textAlign,

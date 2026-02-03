@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "GIR-counter"
 include(":app")
 include(":core:ui")
-include(":feature:gir_counter")
+include(":feature:gir_count")
